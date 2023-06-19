@@ -1,0 +1,79 @@
+package org.example;
+import java.util.Scanner;
+import java.util.regex.*;
+public class UserRegisteration {
+    public static final Scanner scanner=new Scanner(System.in);
+    public static void validFirstName() {
+        System.out.println("Enter the First Name:");
+        String name=scanner.next();
+        String regex="^[A-Z]{1}[a-z]{2,}";
+        Pattern p= Pattern.compile(regex);
+        Matcher m=p.matcher(name);
+        boolean result=m.matches();
+        if (result==true) {
+            System.out.println("First Name is Valid");
+        }
+        else {
+            System.out.println("FIrst Name is invalid");
+        }
+    }
+    public static void validLastName() {
+        System.out.println("Enter the Last Name:");
+        String name = scanner.next();
+        String regex = "^[A-Z]{1}[a-z]{2,}";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(name);
+        boolean result = m.matches();
+        if (result == true) {
+            System.out.println("Last Name is Valid");
+        } else {
+            System.out.println("Last Name is invalid");
+        }
+    }
+    public static void validEmail() {
+        System.out.println("Enter the Email:");
+        String name = scanner.next();
+        String regex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(name);
+        boolean result = m.matches();
+        if (result == true) {
+            System.out.println("Email is Valid");
+        } else {
+            System.out.println("Email is invalid");
+        }
+    }
+    public static void validPassword() {
+        System.out.println("Enter the Password:");
+        String name = scanner.next();
+        String regex = "^(?=.*[0-9])"
+                + "(?=.*[a-z])(?=.*[A-Z])"
+                + "(?=.*[@#$%^&+=])"
+                + "(?=\\S+$).{8,20}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(name);
+        boolean result = m.matches();
+        if (result == true) {
+            System.out.println("Password is Valid");
+        } else {
+            System.out.println("Password is invalid");
+        }
+    }
+    public static void validMobileNumber() {
+        System.out.println("Enter the Mobile Number:");
+        String name=scanner.next();
+        String regex="(0/91){1}[7-9][0-9]{9}";
+        Pattern p= Pattern.compile(regex);
+        Matcher m=p.matcher(name);
+        boolean result=m.matches();
+        if (result==true) {
+            System.out.println("Mobile Number  is Valid");
+        }
+        else {
+            System.out.println("Mobile Number is  invalid");
+        }
+    }
+}

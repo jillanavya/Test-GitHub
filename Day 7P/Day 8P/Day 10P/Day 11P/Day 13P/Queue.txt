@@ -1,0 +1,44 @@
+package com.java.web;
+
+public class Queue {
+
+	  static LinkedList queue = new LinkedList();
+	   
+	   public void enQueue(Object data)
+	   {
+	       queue.addFirst(data);
+	   }
+	   
+	   public void deQueue()
+	   {
+	       queue.deleteLast();
+	   }
+	   
+	   public void showElements()
+	   {
+	       queue.display();
+	   }
+	   
+	   public static void main(String[] args) {
+	       Queue info = new Queue();
+	       info.enQueue(56);
+	       info.showElements();
+	       info.enQueue(30);
+	       info.showElements();
+	       info.enQueue(70);
+	       info.showElements();
+	       
+	       info.deQueue();
+	       info.showElements();
+	       
+	       info.deQueue();
+	       info.showElements();
+	       
+	       info.deQueue();
+	       info.showElements();
+	       
+	    //  info.deQueue();
+	     // info.showElements();
+	   
+}
+}
